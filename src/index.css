@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #131921;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-amazon-orange hover:bg-yellow-500 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-amazon-blue hover:bg-gray-800 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amazon-orange focus:border-transparent;
+  }
+}@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply bg-amazon-orange 
+           hover:bg-yellow-500 
+           text-white 
+           font-medium 
+           py-2 
+           px-4 
+           rounded-md 
+           transition-colors 
+           duration-200 
+           ease-in-out;
+  }
+
+  .nav-link {
+    @apply text-sm text-white hover:text-amazon-light cursor-pointer;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md 
+           focus:outline-none focus:ring-1 focus:ring-amazon-orange 
+           focus:border-amazon-orange;
+  }
+
+  .container-wrapper {
+    @apply max-w-screen-xl mx-auto px-4;
+  }
+}
+
+/* Custom styles that can't be handled by Tailwind utilities */
+:root {
+  --amazon-orange: #FF9900;
+  --amazon-light: #FEBD69;
+  --amazon-dark: #232F3E;
+  --amazon-black: #131921;
+}
+
+body {
+  @apply bg-gray-100;
+}
+
+/* Ensure images don't exceed their container */
+img {
+  @apply max-w-full h-auto;
+}
