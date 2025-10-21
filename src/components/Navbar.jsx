@@ -69,6 +69,9 @@ const Navbar = () => {
                 <Link to="/orders" className="hover:text-amazon-orange transition-colors duration-200">
                   Orders
                 </Link>
+                <Link to="/shop" className="hover:text-amazon-orange transition-colors duration-200">
+                  Shop
+                </Link>
                 <div className="relative group">
                   <button className="flex items-center space-x-1 hover:text-amazon-orange transition-colors duration-200">
                     <span>Hello, {user?.displayName || user?.email}</span>
@@ -152,6 +155,13 @@ const Navbar = () => {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Orders
+                  </Link>
+                  <Link
+                    to="/orders"
+                    className="block px-3 py-2 hover:text-amazon-orange transition-colors duration-200"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Shop
                   </Link>
                   <button
                     onClick={() => {
