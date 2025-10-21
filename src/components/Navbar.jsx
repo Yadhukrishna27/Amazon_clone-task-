@@ -63,15 +63,16 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
+          
           <div className="hidden md:flex items-center space-x-6">
+            <Link to="/shop" className="hover:text-amazon-orange transition-colors duration-200">
+              Shop            </Link>
             {isAuthenticated ? (
               <>
                 <Link to="/orders" className="hover:text-amazon-orange transition-colors duration-200">
                   Orders
                 </Link>
-                <Link to="/shop" className="hover:text-amazon-orange transition-colors duration-200">
-                  Shop
-                </Link>
+                
                 <div className="relative group">
                   <button className="flex items-center space-x-1 hover:text-amazon-orange transition-colors duration-200">
                     <span>Hello, {user?.displayName || user?.email}</span>
@@ -121,6 +122,8 @@ const Navbar = () => {
               </div>
             </Link>
           </div>
+          
+          
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -156,13 +159,7 @@ const Navbar = () => {
                   >
                     Orders
                   </Link>
-                  <Link
-                    to="/orders"
-                    className="block px-3 py-2 hover:text-amazon-orange transition-colors duration-200"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Shop
-                  </Link>
+                  
                   <button
                     onClick={() => {
                       handleSignOut();
