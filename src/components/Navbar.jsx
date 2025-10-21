@@ -185,7 +185,25 @@ const Navbar = () => {
           </motion.div>
         )}
       </div>
+      {/* Mini Nav (Category Bar) */}
+      {/* <div className="bg-[#758A93] text-sm px-4 py-2 flex items-center gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide">
+        <button className="flex items-center gap-1 hover:underline cursor-pointer">
+          <span>☰</span> All
+        </button>
+        <p className="hover:underline cursor-pointer">Amazon Home</p>
+        <p className="hover:underline cursor-pointer">Kitchen</p>
+        <p className="hover:underline cursor-pointer">Home Appliances</p>
+        <p className="hover:underline cursor-pointer">Today’s Deals</p>
+        <p className="hover:underline cursor-pointer">Mobiles</p>
+        <p className="hover:underline cursor-pointer">Customer Service</p>
+        <p className="hover:underline cursor-pointer">Prime ▾</p>
+        <p className="hover:underline cursor-pointer">Electronics</p>
+        <p className="hover:underline cursor-pointer">Fashion</p>
+        <p className="hover:underline cursor-pointer">New Releases</p>
+        <p className="hover:underline cursor-pointer">Home & Kitchen</p>
+      </div> */}
     </nav>
+    
   );
 };
 

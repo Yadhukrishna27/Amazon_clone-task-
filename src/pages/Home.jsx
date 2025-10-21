@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { fetchProducts } from '../redux/productSlice';
 import ProductCard from '../components/ProductCard';
 import ProductFilter from '../components/ProductFilter';
+import MiniNav from '../components/Mininav';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -33,6 +34,8 @@ const Home = () => {
   }
 
   return (
+    <>
+    <MiniNav/>
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <motion.div
@@ -78,6 +81,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
